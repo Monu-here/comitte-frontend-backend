@@ -9,5 +9,5 @@ php artisan serve
 npm install
 then 
 npm start
-hello family
+
 
