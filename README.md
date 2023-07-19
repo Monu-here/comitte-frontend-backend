@@ -1,13 +1,9 @@
-# comitte-frontend-backend
-here is both frontend and backend of comitte
-# in Backend install
-composer install 
-then 
-php artisan serve
+# How to use this
+To use this you have to add the following things to your computer
+1. install node js
+2. install composer 
+After cloning the repository you should use the following
+1. in Frontend folder you should install npm install / npm package
+2. in backend folder you should install composer install / composer package
 
-# in frontend install 
-npm install
-then 
-npm start
-
-
+In your pc there should be laravel version , php version , react version
