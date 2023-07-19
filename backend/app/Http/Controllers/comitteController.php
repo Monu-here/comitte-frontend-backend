@@ -32,6 +32,10 @@ class comitteController extends Controller
         $comitteModel->des = $request->des;
         $comitteModel->save();
     }
+    public function update(Request $request){
+        $comitteModel = comitteModel::where('id', $request->id)->first();
+        return response()->json($comitteModel);
+    }
 
     public function delete(Request $request) {
         $id =$request->id;

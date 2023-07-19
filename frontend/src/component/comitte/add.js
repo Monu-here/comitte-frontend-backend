@@ -18,6 +18,7 @@ function ComitteAdd() {
       .post(`http://localhost:8000/api/comitte/add`, post)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
+      window.location.reload();
     event.preventDefault();
   };
   return (

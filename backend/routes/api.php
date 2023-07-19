@@ -19,11 +19,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('list',[personController::class,'list']);
 Route::post('add',[personController::class,'add']);
+Route::post('edit',[personController::class,'edit']);
 Route::post('delete',[personController::class,'delete']);
 
 Route::get('comitte/list',[comitteController::class,'list']);
 Route::post('comitte/add',[comitteController::class,'add']);
 Route::post('comitte/edit',[comitteController::class,'edit']);
+Route::post('comitte/update',[comitteController::class,'update']);
 Route::post('comitte/delete',[comitteController::class,'delete']);
 
 Route::get('image/list',[imageController::class,'image']);

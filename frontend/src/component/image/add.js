@@ -2,18 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function ImageAdd() {
-  
-
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-
-    
-
     axios
       .post("http://localhost:8000/api/image/add", formData)
       .then(() => console.log("posted"))
       .catch((error) => console.log(error));
+      window .location.reload();
   }
 
  
@@ -28,7 +24,6 @@ function ImageAdd() {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Enter name"
                     name="image_name"
                   />
                   <label htmlFor="floatingInput">Image Name</label>
@@ -41,7 +36,6 @@ function ImageAdd() {
                     multiple
                     accept="image/*"
                     className="form-control"
-                    placeholder="Enter address"
                     name="image"
                     
                   />
@@ -53,7 +47,6 @@ function ImageAdd() {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Enter address"
                     name="description"
                   />
                   <label htmlFor="floatingInput">Description</label>

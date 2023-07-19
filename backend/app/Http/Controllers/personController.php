@@ -21,6 +21,17 @@ class personController extends Controller
         $personModel->citzenship = $request->citzenship;
         $personModel->save();
     }
+    public function edit(Request $request){
+        $personModel = personModel::where('id',$request->id)->first();
+        $personModel ->c_name= $request->c_name;
+        $personModel->name = $request->name;
+        $personModel->address = $request->address;
+        $personModel->age = $request->age;
+        $personModel->number = $request->number;
+        $personModel->dob = $request->dob;
+        $personModel->citzenship = $request->citzenship;
+        $personModel->save();
+    }
     public function delete(Request $request) {
         $id = $request->id;
         $personModel = personModel::where('id', $id)->first();

@@ -19,7 +19,7 @@ function ComitteEdit() {
 
   useEffect(() => {
     axios
-      .post(`http://localhost:8000/api/comitte/edit`, { id: id }) 
+      .post(`http://localhost:8000/api/comitte/update`, { id: id }) 
       .then((res) => {
         const { c_name, country, state, city, district } = res.data;
         setValue({
